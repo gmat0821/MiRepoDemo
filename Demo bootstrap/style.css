@@ -1,0 +1,18 @@
+
+.navbar{
+    padding: 2rem;
+    background: lightblue;
+}
+
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:768px){
+    .navbar-brand{
+        display: none;
+
+    }
+    
+}
