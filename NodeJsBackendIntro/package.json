@@ -1,0 +1,19 @@
+{
+  "name": "first-backend",
+  "version": "1.0.0",
+  "description": "Primer ejercicio practica de nodeJs para backend",
+  "license": "ISC",
+  "author": "Genesis Mariana Aguilar Teran",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
