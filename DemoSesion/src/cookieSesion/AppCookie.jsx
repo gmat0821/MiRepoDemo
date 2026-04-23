@@ -1,24 +1,24 @@
-
-import { useAuthCookie } from "./useAuthCookie";
-
+import { UseAuthCookie } from "./UseAuthCookie";
 
 export default function AppCookie() {
-  const { token, login, logout } = useAuthCookie();
-
+  const { token, login, logout } = UseAuthCookie();
 
   return (
-    <div>
-      <h3>Auth con Cookies</h3>
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h2>Prueba de Cookies</h2>
       {
         token ? (
-          <>
-            <p>Sesión Activa</p>
-            <button onClick = {logout}>Logout</button>
-          </>
+          <div>
+            <p style={{ color: 'green' }}>✅ Sesión iniciada: <strong>{token}</strong></p>
+            <button onClick={logout}>Cerrar Sesión</button>
+          </div>
         ) : (
-          <button onClick = {login}>Login</button>
+          <div>
+            <p style={{ color: 'red' }}>❌ No hay sesión activa</p>
+            <button onClick={login}>Iniciar Sesión (Login)</button>
+          </div>
         )
       }
     </div>
-  )
+  );
 }
