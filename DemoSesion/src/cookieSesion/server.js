@@ -32,7 +32,7 @@ app.post("/login", (req, res) => {
 app.get("/perfil", auth, (req, res) => {
     res.json({
         message: "Eres usuario protegido",
-        user: req.user.username
+        user: req.user
     });
 });
 

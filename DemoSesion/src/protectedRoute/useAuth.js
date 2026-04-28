@@ -1,0 +1,30 @@
+import { useState, useEffect } from "react";
+
+export default function useAuth (){
+    const  [usuario, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    const checkAuth = async () => {
+        try {
+            const res = await fetch("http://localhost:8080/perfil", {
+                credentials: "include"
+            });
+            if (res.ok) {
+                throw new Error();
+                const data = await res.json();
+                setUser(data.user);
+                }
+        }catch{
+            setUser(null);
+        }finally{
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        checkAuth();
+    }, []);
+
+    return {usuario, loading, checkAuth};
+    
+}
