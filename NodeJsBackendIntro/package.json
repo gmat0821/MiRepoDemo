@@ -1,9 +1,9 @@
 {
   "name": "first-backend",
   "version": "1.0.0",
-  "description": "Primer ejercicio practica de nodeJs para backend",
+  "description": "Primer ejercicio practico de nodejs para backend",
   "license": "ISC",
-  "author": "Genesis Mariana Aguilar Teran",
+  "author": "Gibran Razo",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
